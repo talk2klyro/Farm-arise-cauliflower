@@ -9,9 +9,9 @@
   <style>
     /* --- Root Variables --- */
     :root {
-      --primary-color: #88B04B; /* Calming green for safe vibe */
-      --secondary-color: #F3F4F6; /* Light neutral background */
-      --accent-color: #FFD966; /* Fun playful yellow */
+      --primary-color: #88B04B;
+      --secondary-color: #F3F4F6;
+      --accent-color: #FFD966;
       --text-color: #333;
       --heading-color: #2F4F4F;
       --border-radius: 12px;
@@ -120,21 +120,28 @@
       color: #fff;
     }
 
+    /* --- Disabled Button --- */
+    .button.disabled {
+      pointer-events: none;
+      background-color: #ccc;
+      color: #777;
+      cursor: not-allowed;
+      transform: none;
+      text-decoration: none;
+    }
+
+    .button.disabled:hover {
+      transform: none;
+      background-color: #ccc;
+      color: #777;
+    }
+
     /* --- Images --- */
     img {
       max-width: 100%;
       border-radius: var(--border-radius);
       margin-bottom: 1rem;
       display: block;
-    }
-
-    /* --- SEO Microdata Example --- */
-    article {
-      padding: 1rem 0;
-    }
-
-    article h2 {
-      margin-top: 1.5rem;
     }
 
     /* --- Responsive --- */
@@ -201,9 +208,9 @@
       <p>Now you know how easy it is! Think about it: one small cauliflower can become so many fun dishes. 🥳 Try it today and enjoy a crunchy, healthy adventure! 🥦💛</p>
     </div>
 
-    <!-- CTA Button -->
+    <!-- CTA Button (Disabled) -->
     <div style="text-align: center; margin-top: 2rem;">
-      <a class="button" href="https://readify-rust.vercel.app/" target="_blank">
+      <a class="button disabled" href="#" aria-disabled="true" tabindex="-1">
         📖 Read More
       </a>
     </div>
@@ -211,4 +218,4 @@
   </div>
 
 </body>
-</html>
+  </html>
